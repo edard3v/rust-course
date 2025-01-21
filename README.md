@@ -1,1 +1,1 @@
-# Aprendiendo rust
+# Curso rust
