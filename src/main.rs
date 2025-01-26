@@ -1,6 +1,8 @@
 fn main() {
-    let x = 10;
-    let y = &x;
+    let x = "¡Hola";
+    let mut y = String::new();
+
+    y.push_str("mundo!");
 
     println!("{x} {y}");
 }
