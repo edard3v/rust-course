@@ -1,10 +1,10 @@
 fn main() {
-    let iva = 5;
-    let discount = 20;
+    let mut x = String::from("¡Hola");
 
-    let total = 100;
-    let total = total - discount;
-    let total = total + iva;
+    {
+        let y = &mut x;
+        y.push_str(" mundo!");
+    }
 
-    println!("{total}");
+    println!("{x}");
 }
