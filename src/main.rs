@@ -1,8 +1,10 @@
 fn main() {
-    let x = "¡Hola";
-    let mut y = String::new();
+    let iva = 5;
+    let discount = 20;
 
-    y.push_str("mundo!");
+    let total = 100;
+    let total = total - discount;
+    let total = total + iva;
 
-    println!("{x} {y}");
+    println!("{total}");
 }
