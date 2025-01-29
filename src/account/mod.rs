@@ -1,5 +1,6 @@
 #[derive(Debug)]
 #[allow(dead_code)]
+#[expect(dead_code)]
 pub struct Account {
     username: String,
     password: String,
