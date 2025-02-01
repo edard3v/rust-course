@@ -2,14 +2,21 @@ fn main() {
     #[derive(Debug)]
     #[expect(dead_code)]
     enum Role {
-        Admin = 0,
-        Client = 99,
-        Boss,
+        Admin(String),
+        Client { id: u32, display: String },
+        Boss(u32, String),
     }
 
-    fn print_role(role: Role) {
-        println!("{:?}", role as u32)
+    impl Role {
+        fn print(&self) {
+            match self {
+                Role::Admin(display) => println!("{display}"),
+                Role::Client { id, display } => println!("{id} {display}"),
+                Role::Boss(id, display) => println!("{id} {display}"),
+            }
+        }
     }
 
-    print_role(Role::Boss);
+    let boss = Role::Boss(1, "BOSS".to_string());
+    boss.print();
 }
