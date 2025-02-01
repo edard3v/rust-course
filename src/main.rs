@@ -11,5 +11,5 @@ fn main() {
         println!("{:?}", role as u32)
     }
 
-    print_role(Role::Admin);
+    print_role(Role::Boss);
 }
