@@ -1,0 +1,8 @@
+# Usar 2 espacios en lugar de tabulaciones
+tab_spaces = 2
+
+# Límite de ancho de línea
+max_width = 100
+
+# Formatear cadenas de texto
+format_strings = true
