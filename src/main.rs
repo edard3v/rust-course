@@ -1,22 +1,24 @@
 fn main() {
-    #[derive(Debug)]
-    #[expect(dead_code)]
-    enum Role {
-        Admin(String),
-        Client { id: u32, display: String },
-        Boss(u32, String),
-    }
+    let mut edar = Account {
+        username: "edard3v",
+        password: "123",
+    };
 
-    impl Role {
-        fn print(&self) {
-            match self {
-                Role::Admin(display) => println!("{display}"),
-                Role::Client { id, display } => println!("{id} {display}"),
-                Role::Boss(id, display) => println!("{id} {display}"),
-            }
-        }
-    }
+    edar.password = "asdfs";
+    edar.reset_password("asdfsdf");
 
-    let boss = Role::Boss(1, "BOSS".to_string());
-    boss.print();
+    println!("{edar:?}")
+}
+
+#[derive(Debug)]
+#[expect(dead_code)]
+struct Account {
+    username: &'static str,
+    password: &'static str,
+}
+
+impl Account {
+    fn reset_password(&mut self, new_password: &'static str) {
+        self.password = new_password
+    }
 }
