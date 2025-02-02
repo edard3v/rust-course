@@ -1,24 +1,16 @@
 fn main() {
-    let mut edar = Account {
-        username: "edard3v",
-        password: "123",
-    };
+    let x = divide(4, 0);
 
-    edar.password = "asdfs";
-    edar.reset_password("asdfsdf");
-
-    println!("{edar:?}")
+    match x {
+        Err(x) => println!("{x}"),
+        Ok(x) => println!("{x}"),
+    }
 }
 
-#[derive(Debug)]
-#[expect(dead_code)]
-struct Account {
-    username: &'static str,
-    password: &'static str,
-}
-
-impl Account {
-    fn reset_password(&mut self, new_password: &'static str) {
-        self.password = new_password
+fn divide(a: u32, b: u32) -> Result<u32, String> {
+    if b == 0 {
+        Err("No es posible dividir por 0".to_string())
+    } else {
+        Ok(a / b)
     }
 }
