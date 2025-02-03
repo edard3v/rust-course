@@ -1,10 +1,9 @@
 fn main() {
-  let x = "EDAR".to_string();
-  let y = &x;
+  let x = "edar";
 
-  foo(y);
+  foo(x);
 }
 
 fn foo(a: &str) -> &str {
-  a
+  return a;
 }
