@@ -1,9 +1,14 @@
 fn main() {
-  let x = "edar";
+  let x = "edar".to_string();
+  let y = "d3v".to_string();
 
-  foo(x);
+  longest(x.as_str(), y.as_str());
 }
 
-fn foo(a: &str) -> &str {
-  return a;
+fn longest<'a>(a: &'a str, b: &'a str) -> &'a str {
+  if a.len() > b.len() {
+    a
+  } else {
+    b
+  }
 }
