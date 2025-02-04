@@ -1,21 +1,23 @@
 fn main() {
-  struct Animal;
-  impl Animal {
-    fn print(&self) {
-      println!("Animal");
+  trait Printable {
+    fn print(&self, txt: &str) {
+      println!("{txt}");
     }
   }
 
+  struct Animal;
+  impl Printable for Animal {}
+
   struct Account;
-  impl Account {
-    fn print(&self) {
-      println!("Account");
+  impl Printable for Account {
+    fn print(&self, txt: &str) {
+      println!("***************{txt}***********")
     }
   }
 
   let x = Animal {};
   let y = Account {};
 
-  x.print();
-  y.print();
+  x.print("Animal");
+  y.print("Account");
 }
