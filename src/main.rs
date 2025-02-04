@@ -1,14 +1,21 @@
 fn main() {
-  let x = "edar".to_string();
-  let y = "d3v".to_string();
-
-  longest(x.as_str(), y.as_str());
-}
-
-fn longest<'a>(a: &'a str, b: &'a str) -> &'a str {
-  if a.len() > b.len() {
-    a
-  } else {
-    b
+  struct Animal;
+  impl Animal {
+    fn print(&self) {
+      println!("Animal");
+    }
   }
+
+  struct Account;
+  impl Account {
+    fn print(&self) {
+      println!("Account");
+    }
+  }
+
+  let x = Animal {};
+  let y = Account {};
+
+  x.print();
+  y.print();
 }
