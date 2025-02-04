@@ -1,6 +1,6 @@
 # Traits en Rust
 
-Permiten definir funcionalidades comunes que pueden ser compartidas entre diferentes tipos, promoviendo la reutilización de código y la abstracción. En Rust, los traits son una herramienta poderosa para lograr **polimorfismo** sin sacrificar el rendimiento o la seguridad de tipos.
+Permiten definir rasgos comunes que pueden ser compartidos entre tipos, promoviendo la reutilización de código y la abstracción. En Rust, los traits son una herramienta poderosa para lograr **polimorfismo** sin sacrificar el rendimiento o la seguridad de tipos.
 
 ## Beneficios
 
