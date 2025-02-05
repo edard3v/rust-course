@@ -1,12 +1,7 @@
 fn main() {
-  let x = |a, b| a + b;
+  let x = vec![1, 3, 4];
 
-  fn y<F>(f: F) -> i32
-  where
-    F: Fn(i32, i32) -> i32,
-  {
-    f(2, 3)
-  }
+  let r: Vec<i32> = x.iter().map(|item| item * 2).collect();
 
-  println!("{}", y(x))
+  println!("{r:?}");
 }
